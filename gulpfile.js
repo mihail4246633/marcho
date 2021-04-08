@@ -30,6 +30,9 @@ const styles = () => {
 const scripts = () => {
     return src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/slick-carousel/slick/slick.js',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+            'node_modules/rateyo/src/jquery.rateyo.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))
@@ -60,7 +63,7 @@ const cleanDist = () => {
 
 const watching = () => {
     watch(['app/scss/**/*.scss'], styles);
-    watch(['app/**/*.js', '!app/main.min.js'], scripts);
+    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
