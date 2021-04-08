@@ -208,6 +208,7 @@
                 border-radius: 50%;
                 outline: none;
                 position: relative;
+                cursor: pointer;
                 &::before {
                     position: absolute;
                     content: '';
@@ -541,7 +542,6 @@
             color: $title;
         }
     }
-    &__text {}
     &__link {
         text-transform: uppercase;
         color: $title;
@@ -560,6 +560,14 @@
         justify-content: space-between;
         align-items: center;
     }
+}
+
+.blog {
+    padding-top: 50px;
+    background-image: url('../images/blog-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 @import 'media';
