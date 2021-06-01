@@ -1761,4 +1761,132 @@
                 }
             }
             
+            .blog-one {
+                &__text {
+                    border: 1px solid #ececec;
+                    border-top: none;
+                    padding: 30px;
+                    margin-top: -1px;
+                    h4 {
+                        color: $title;
+                        font-size: 22px;
+                        @extend %roboto_700;
+                        margin: 25px 0;
+                    }
+                    p {
+                        margin: 25px 0;
+                    }
+                    blockquote {
+                        background-color: $bg;
+                        border-left: 3px solid $accent;
+                        color: $title;
+                        @extend %roboto_700;
+                        font-size: 22px;
+                        margin: 25px 0;
+                        padding: 35px;
+                    }
+                }
+                &__left-img {
+                    float: left;
+                    margin-right: 30px;
+                    margin-bottom: 10px;
+                }
+                &__right-img {
+                    float: right;
+                    margin-left: 30px;
+                    margin-bottom: 10px;
+                }
+                &__info {
+                    display: flex;
+                    margin-bottom: 25px;
+                }
+                &__info-item {
+                    margin-right: 30px;
+                    padding-left: 28px;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        background-image: url('../images/icons/calendar.svg');
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+                &__info-item--comments::before {
+                    background-image: url('../images/icons/comment.svg')
+                }
+                &__info-item--author::before {
+                    background-image: url('../images/icons/user-red.svg')
+                }
+                &__form-title {
+                    text-transform: uppercase;
+                    margin: 35px 0 25px;
+                    color: $title;
+                    font-size: 24px;
+                    @extend %roboto_700;
+                }
+                .comments-form {
+                    border-bottom: none;
+                }
+                &__box {
+                    margin: 25px 0 35px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &__tags {
+                    span {
+                        text-transform: uppercase;
+                        color: $title;
+                    }
+                }
+                &__share {
+                    path {
+                        fill: $default;
+                    }
+                    a {
+                        margin-right: 12px;
+                        vertical-align: middle;
+                        &:hover {
+                            path {
+                                transition: all .4s;
+                                fill: $accent;
+                            }
+                        }
+                    }
+                    span {
+                        color: $title;
+                        text-transform: uppercase;
+                    }
+                }
+                &__author {
+                    border-bottom: 1px solid #ececec;
+                    padding-bottom: 40px;
+                    margin-bottom: 40px;
+                    display: flex;
+                }
+                &__author-img {
+                    object-fit: cover;
+                    width: 140px;
+                    height: 140px;
+                    margin-right: 30px;
+                }
+                &__author-name {
+                    margin-bottom: 22px;
+                    text-transform: uppercase;
+                    @extend %roboto_700;
+                    color: $title;
+                    font-size: 22px;
+                }
+            }
+            
+            .comments-title {
+                text-transform: uppercase;
+                margin-bottom: 25px;
+                color: $title;
+                @extend %roboto_700;
+                font-size: 24px;
+            }
+            
             @import 'media';
