@@ -124,6 +124,9 @@
                 &__text {
                     margin-bottom: 25px;
                 }
+                &__form {
+                    display: flex;
+                }
                 &__form-input {
                     background-color: #fff;
                     max-width: 320px;
@@ -131,6 +134,7 @@
                     border: none;
                     padding: 12px 10px 12px 15px;
                     box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+                    margin-right: 3px;
                 }
                 &__form-input::placeholder {
                     color: $default;
