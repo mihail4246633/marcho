@@ -77,7 +77,7 @@ const cleanDist = () => {
 }
 
 const watching = () => {
-    watch(['app/scss/**/*.scss'], styles);
+    watch(['app/**/*.scss'], styles);
     watch(['app/*.njk'], nunjucks);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload);
